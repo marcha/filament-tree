@@ -51,10 +51,22 @@ trait HasRecords
 
     protected function getSortedQuery(): Builder
     {
-        $query = $this->getWithRelationQuery();
-        if (method_exists($this->getModel(), 'scopeOrdered')) {
-            return $this->getWithRelationQuery()->ordered();
+        if ($this->searchString !== '') {
+            if (method_exists($this->getModel(), 'scopeByKeyword')) {            
+                $query = $this->getTreeQuery()->byKeyword($this->searchString);            
+            
+                if (method_exists($this->getModel(), 'scopeOrdered')) {
+                    return $this->getTreeQuery()->byKeyword($this->searchString)->ordered();
+                }
+            }
+        } else {
+            $query = $this->getWithRelationQuery();
+
+            if (method_exists($this->getModel(), 'scopeOrdered')) {
+                return $this->getWithRelationQuery()->ordered();
+            }
         }
+        
         return $query;
     }
 

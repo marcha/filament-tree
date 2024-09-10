@@ -2,7 +2,6 @@
     $containerKey = 'filament_tree_container_' . $this->getId();
     $maxDepth = $getMaxDepth() ?? 1;
     $records = collect($this->getRootLayerRecords() ?? []);
-
 @endphp
 
 <div wire:disabled="updateTree"
@@ -24,13 +23,27 @@
                 </x-filament::button>
             </div>
             <div class="btn-group">
-                <x-filament::button tag="button" data-action="save" x-on:click="save()" wire:loading.attr="disabled" wire:loading.class="cursor-wait opacity-70">
-                    <x-filament::loading-indicator class="h-4 w-4" wire:loading wire:target="updateTree"/>
-                    <span wire:loading.remove wire:target="updateTree">
-                        {{ __('filament-tree::filament-tree.button.save') }}
-                    </span>
+                @if ($this->isEditable())
+                    <x-filament::button tag="button" data-action="save" x-on:click="save()" wire:loading.attr="disabled" wire:loading.class="cursor-wait opacity-70">
+                        <x-filament::loading-indicator class="h-4 w-4" wire:loading wire:target="updateTree"/>
+                        <span wire:loading.remove wire:target="updateTree">
+                            {{ __('filament-tree::filament-tree.button.save') }}
+                        </span>
 
-                </x-filament::button>
+                    </x-filament::button>
+                @endif
+            </div>
+
+            <div class="btn-group ml-auto">
+                <form wire:submit.prevent="searchTree">   
+                    <x-filament::input.wrapper prefix-icon="heroicon-m-magnifying-glass">
+                        <x-filament::input
+                            type="text"
+                            wire:model.lazy="searchString"
+                            placeholder="{{ __('filament-tree::filament-tree.input.search') }}"
+                        />
+                    </x-filament::input.wrapper>                
+                </form>
             </div>
         </menu>
         <div class="filament-tree dd" id="{{ $containerKey }}">

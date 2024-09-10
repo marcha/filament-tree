@@ -8,27 +8,27 @@ return [
         | Buttons
         |--------------------------------------------------------------------------
     */
-    'button.save' => 'Save',
-    'button.expand_all' => 'Expand All',
-    'button.collapse_all' => 'Collapse All',
+    'button.save' => 'Snimi',
+    'button.expand_all' => 'Proširi',
+    'button.collapse_all' => 'Skupi',
 	
 	/*search */
-	'input.search' => 'Search',
+	'input.search' => 'Traži',
 
     /*
         |--------------------------------------------------------------------------
         | Form
         |--------------------------------------------------------------------------
     */
-    'components.tree.buttons.select_all.label' => 'Select All',
-    'components.tree.buttons.deselect_all.label' => 'Deselect All',
-    'components.tree.buttons.expand_all.label' => 'Expand All',
-    'components.tree.buttons.collapse_all.label' => 'Collapse All',
+    'components.tree.buttons.select_all.label' => 'Selektuj sve',
+    'components.tree.buttons.deselect_all.label' => 'Odselektuj sve',
+    'components.tree.buttons.expand_all.label' => 'Proširi sve',
+    'components.tree.buttons.collapse_all.label' => 'Skupi sve',
     
     /*
         |--------------------------------------------------------------------------
         | Message
         |--------------------------------------------------------------------------
     */
-    'actions.delete.confirmation.with_children' => 'Are you sure delete this record and its children?',
+    'actions.delete.confirmation.with_children' => 'Sigurno želite da obrišete ovaj slog i njegove podelemente?',
 ];

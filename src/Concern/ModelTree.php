@@ -5,6 +5,7 @@ namespace SolutionForest\FilamentTree\Concern;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use SolutionForest\FilamentTree\Concern\SupportTranslation;
 use SolutionForest\FilamentTree\Support\Utils;
@@ -53,6 +54,11 @@ trait ModelTree
     public function children(): HasMany
     {
         return $this->hasMany(static::class, $this->determineParentColumnName())->with('children')->orderBy($this->determineOrderColumnName());
+    }
+
+    public function childrenByKeyword($keyword,  $id): Collection
+    {
+        return collect(static::query()->byKeyword($keyword)->where(Utils::parentColumnName(), $id)->get());
     }
 
     public function isRoot(): bool

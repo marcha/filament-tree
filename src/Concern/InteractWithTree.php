@@ -23,6 +23,8 @@ trait InteractWithTree
 
     protected Tree $tree;
 
+    public string $searchString = "";
+
     public function bootedInteractWithTree()
     {
         $tree = $this->getTree();

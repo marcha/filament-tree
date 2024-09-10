@@ -182,7 +182,7 @@ trait HasActions
     public function mountedTreeActionShouldOpenModal(): bool
     {
         return ($this->getMountedTreeAction())->shouldOpenModal(
-            checkForFormUsing: $this->mountedTableActionHasForm(...),
+            checkForFormUsing: $this->mountedTreeActionHasForm(...),
         );
         // $action = $this->getMountedTreeAction();
 
