@@ -1,10 +1,10 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Contract;
+namespace Marcha\FilamentTree\Contract;
 
 use Filament\Support\Contracts\TranslatableContentDriver;
 use Illuminate\Database\Eloquent\Model;
-use SolutionForest\FilamentTree\Components\Tree;
+use Marcha\FilamentTree\Components\Tree;
 
 interface HasTree
 {

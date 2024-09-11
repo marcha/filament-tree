@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Support;
+namespace Marcha\FilamentTree\Support;
 
 class Utils
 {

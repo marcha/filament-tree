@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Concern;
+namespace Marcha\FilamentTree\Concern;
 
 use Illuminate\Database\Eloquent\Model;
 

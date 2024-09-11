@@ -1,9 +1,9 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Concern;
+namespace Marcha\FilamentTree\Concern;
 
 use Filament\Support\Contracts\TranslatableContentDriver;
-use SolutionForest\FilamentTree\Contract\HasTree;
+use Marcha\FilamentTree\Contract\HasTree;
 
 trait BelongsToLivewire
 {

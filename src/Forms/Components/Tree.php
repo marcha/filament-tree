@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Forms\Components;
+namespace Marcha\FilamentTree\Forms\Components;
 
 use Closure;
 use Filament\Forms\ComponentContainer;

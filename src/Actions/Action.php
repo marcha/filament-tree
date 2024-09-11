@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Actions;
+namespace Marcha\FilamentTree\Actions;
 
 
 use Filament\Actions\Concerns\HasMountableArguments;
@@ -10,8 +10,8 @@ use Filament\Actions\Contracts\HasRecord;
 use Filament\Actions\Action as BaseAction;
 use Filament\Actions\StaticAction;
 use Illuminate\Database\Eloquent\Model;
-use SolutionForest\FilamentTree\Concern\Actions\HasTree;
-use SolutionForest\FilamentTree\Concern\BelongsToTree;
+use Marcha\FilamentTree\Concern\Actions\HasTree;
+use Marcha\FilamentTree\Concern\BelongsToTree;
 
 class Action extends BaseAction implements Groupable, HasRecord, HasTree
 {

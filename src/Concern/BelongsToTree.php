@@ -1,9 +1,9 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Concern;
+namespace Marcha\FilamentTree\Concern;
 
-use SolutionForest\FilamentTree\Components\Tree;
-use SolutionForest\FilamentTree\Contract\HasTree;
+use Marcha\FilamentTree\Components\Tree;
+use Marcha\FilamentTree\Contract\HasTree;
 
 trait BelongsToTree
 {

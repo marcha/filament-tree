@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Concern\TreeRecords;
+namespace Marcha\FilamentTree\Concern\TreeRecords;
 
 trait HasActiveLocaleSwitcher
 {

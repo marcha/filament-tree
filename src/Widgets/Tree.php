@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Widgets;
+namespace Marcha\FilamentTree\Widgets;
 
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
@@ -8,13 +8,13 @@ use Filament\Infolists\Components\Component as InfolistsComponent;
 use Filament\Support\Contracts\TranslatableContentDriver;
 use Filament\Widgets\Widget;
 use Illuminate\Database\Eloquent\Model;
-use SolutionForest\FilamentTree\Actions\Action;
-use SolutionForest\FilamentTree\Actions\DeleteAction;
-use SolutionForest\FilamentTree\Actions\EditAction;
-use SolutionForest\FilamentTree\Actions\ViewAction;
-use SolutionForest\FilamentTree\Components\Tree as TreeComponent;
-use SolutionForest\FilamentTree\Concern\InteractWithTree;
-use SolutionForest\FilamentTree\Contract\HasTree;
+use Marcha\FilamentTree\Actions\Action;
+use Marcha\FilamentTree\Actions\DeleteAction;
+use Marcha\FilamentTree\Actions\EditAction;
+use Marcha\FilamentTree\Actions\ViewAction;
+use Marcha\FilamentTree\Components\Tree as TreeComponent;
+use Marcha\FilamentTree\Concern\InteractWithTree;
+use Marcha\FilamentTree\Contract\HasTree;
 
 class Tree extends Widget implements HasTree, HasForms
 {

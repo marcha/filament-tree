@@ -4,12 +4,12 @@ namespace {{ namespace }};
 
 use App\Models\{{ model }};
 use Filament\Notifications\Notification;
-use SolutionForest\FilamentTree\Actions\Action;
-use SolutionForest\FilamentTree\Actions\ActionGroup;
-use SolutionForest\FilamentTree\Actions\DeleteAction;
-use SolutionForest\FilamentTree\Actions\EditAction;
-use SolutionForest\FilamentTree\Actions\ViewAction;
-use SolutionForest\FilamentTree\Widgets\Tree as BaseWidget;
+use Marcha\FilamentTree\Actions\Action;
+use Marcha\FilamentTree\Actions\ActionGroup;
+use Marcha\FilamentTree\Actions\DeleteAction;
+use Marcha\FilamentTree\Actions\EditAction;
+use Marcha\FilamentTree\Actions\ViewAction;
+use Marcha\FilamentTree\Widgets\Tree as BaseWidget;
 
 class {{ class }} extends BaseWidget
 {

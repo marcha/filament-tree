@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Actions;
+namespace Marcha\FilamentTree\Actions;
 
 use Filament\Actions\Concerns\CanCustomizeProcess;
 use Illuminate\Database\Eloquent\Model;

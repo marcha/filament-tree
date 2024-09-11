@@ -12,7 +12,7 @@
         $actions,
         function ($action) use ($record): bool {
 
-            if (! $action instanceof \SolutionForest\FilamentTree\Actions\Modal\Action) {
+            if (! $action instanceof \Marcha\FilamentTree\Actions\Modal\Action) {
                 $action->record($record);
             }
             

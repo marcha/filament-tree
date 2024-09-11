@@ -1,9 +1,9 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Macros;
+namespace Marcha\FilamentTree\Macros;
 
 use Illuminate\Database\Schema\Blueprint;
-use SolutionForest\FilamentTree\Support\Utils;
+use Marcha\FilamentTree\Support\Utils;
 
 /**
  * @see Blueprint

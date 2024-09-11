@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Resources\Pages;
+namespace Marcha\FilamentTree\Resources\Pages;
 
 use Filament\Actions\CreateAction;
 use Filament\Forms\Form;
@@ -11,10 +11,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Route as RouteFacade;
 use Illuminate\Support\Str;
-use SolutionForest\FilamentTree\Actions\DeleteAction;
-use SolutionForest\FilamentTree\Actions\EditAction;
-use SolutionForest\FilamentTree\Actions\ViewAction;
-use SolutionForest\FilamentTree\Pages\TreePage as BasePage;
+use Marcha\FilamentTree\Actions\DeleteAction;
+use Marcha\FilamentTree\Actions\EditAction;
+use Marcha\FilamentTree\Actions\ViewAction;
+use Marcha\FilamentTree\Pages\TreePage as BasePage;
 
 abstract class TreePage extends BasePage
 {

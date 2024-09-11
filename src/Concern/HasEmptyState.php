@@ -1,9 +1,9 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Concern;
+namespace Marcha\FilamentTree\Concern;
 
 use Closure;
-use SolutionForest\FilamentTree\Actions\Action;
+use Marcha\FilamentTree\Actions\Action;
 use Illuminate\Contracts\View\View;
 
 trait HasEmptyState

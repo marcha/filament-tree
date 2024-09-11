@@ -5,10 +5,10 @@ namespace {{ namespace }};
 use App\Models\{{ model }};
 use Filament\Forms;
 use Filament\Pages\Actions\CreateAction;
-use SolutionForest\FilamentTree\Actions;
-use SolutionForest\FilamentTree\Concern;
-use SolutionForest\FilamentTree\Pages\TreePage as BasePage;
-use SolutionForest\FilamentTree\Support\Utils;
+use Marcha\FilamentTree\Actions;
+use Marcha\FilamentTree\Concern;
+use Marcha\FilamentTree\Pages\TreePage as BasePage;
+use Marcha\FilamentTree\Support\Utils;
 
 class {{ class }} extends BasePage
 {

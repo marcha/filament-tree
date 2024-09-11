@@ -1,6 +1,6 @@
 @php use Illuminate\Database\Eloquent\Model; @endphp
 @php use Filament\Facades\Filament; @endphp
-@php use SolutionForest\FilamentTree\Components\Tree; @endphp
+@php use Marcha\FilamentTree\Components\Tree; @endphp
 @php use App\Filament\Pages\Enums\TreeNodeType; @endphp
 @props(['record', 'containerKey', 'tree', 'title' => null, 'icon' => null])
 @php

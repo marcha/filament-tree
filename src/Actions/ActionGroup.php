@@ -1,12 +1,12 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Actions;
+namespace Marcha\FilamentTree\Actions;
 
 use Filament\Actions\ActionGroup as BaseActionGroup;
 use Filament\Actions\Concerns\InteractsWithRecord;
 use Filament\Actions\Contracts\HasRecord;
-use SolutionForest\FilamentTree\Components\Tree;
-use SolutionForest\FilamentTree\Concern\Actions\HasTree;
+use Marcha\FilamentTree\Components\Tree;
+use Marcha\FilamentTree\Concern\Actions\HasTree;
 
 class ActionGroup extends BaseActionGroup implements HasRecord, HasTree
 {

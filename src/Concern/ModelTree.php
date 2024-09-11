@@ -1,14 +1,14 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Concern;
+namespace Marcha\FilamentTree\Concern;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use SolutionForest\FilamentTree\Concern\SupportTranslation;
-use SolutionForest\FilamentTree\Support\Utils;
+use Marcha\FilamentTree\Concern\SupportTranslation;
+use Marcha\FilamentTree\Support\Utils;
 
 trait ModelTree
 {

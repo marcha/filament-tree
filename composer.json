@@ -1,16 +1,10 @@
 {
-    "name": "solution-forest/filament-tree",
+    "name": "marcha/filament-tree",
     "description": "This is a tree layout plugin for Filament Admin",
-    "keywords": [
-        "Solution Forest",
+    "keywords": [    
         "laravel",
         "filament-tree"
-    ],
-    "homepage": "https://github.com/solution-forest/filament-tree",
-    "support": {
-        "issues": "https://github.com/solution-forest/filament-tree/issues",
-        "source": "https://github.com/solution-forest/filament-tree"
-    },
+    ],    
     "license": "MIT",
     "authors": [{
         "name": "Carly",
@@ -38,12 +32,12 @@
     },
     "autoload": {
         "psr-4": {
-            "SolutionForest\\FilamentTree\\": "src"
+            "Marcha\\FilamentTree\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SolutionForest\\FilamentTree\\Tests\\": "tests"
+            "Marcha\\FilamentTree\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -66,7 +60,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SolutionForest\\FilamentTree\\FilamentTreeServiceProvider"
+                "Marcha\\FilamentTree\\FilamentTreeServiceProvider"
             ]
         }
     },

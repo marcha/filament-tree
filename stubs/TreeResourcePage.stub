@@ -4,10 +4,10 @@ namespace {{ namespace }};
 
 use {{ resource }};
 use Filament\Pages\Actions\CreateAction;
-use SolutionForest\FilamentTree\Actions;
-use SolutionForest\FilamentTree\Concern;
-use SolutionForest\FilamentTree\Resources\Pages\TreePage as BasePage;
-use SolutionForest\FilamentTree\Support\Utils;
+use Marcha\FilamentTree\Actions;
+use Marcha\FilamentTree\Concern;
+use Marcha\FilamentTree\Resources\Pages\TreePage as BasePage;
+use Marcha\FilamentTree\Support\Utils;
 
 class {{ class }} extends BasePage
 {

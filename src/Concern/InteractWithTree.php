@@ -1,16 +1,16 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Concern;
+namespace Marcha\FilamentTree\Concern;
 
 use Closure;
 use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Model;
-use SolutionForest\FilamentTree\Components\Tree;
-use SolutionForest\FilamentTree\Concern\HasActions;
-use SolutionForest\FilamentTree\Concern\HasRecords;
-use SolutionForest\FilamentTree\Concern\HasEmptyState;
-use SolutionForest\FilamentTree\Concern\HasHeading;
-use SolutionForest\FilamentTree\Support\Utils;
+use Marcha\FilamentTree\Components\Tree;
+use Marcha\FilamentTree\Concern\HasActions;
+use Marcha\FilamentTree\Concern\HasRecords;
+use Marcha\FilamentTree\Concern\HasEmptyState;
+use Marcha\FilamentTree\Concern\HasHeading;
+use Marcha\FilamentTree\Support\Utils;
 
 trait InteractWithTree
 {

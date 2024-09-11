@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionForest\FilamentTree;
+namespace Marcha\FilamentTree;
 
 use Filament\Support\Assets\Js;
 use Filament\Support\Assets\Css;
@@ -10,7 +10,7 @@ use Filament\Support\Facades\FilamentView;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Assets\AlpineComponent;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use SolutionForest\FilamentTree\Macros\BlueprintMarcos;
+use Marcha\FilamentTree\Macros\BlueprintMarcos;
 
 class FilamentTreeServiceProvider extends PackageServiceProvider
 {

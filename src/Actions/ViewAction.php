@@ -1,11 +1,11 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Actions;
+namespace Marcha\FilamentTree\Actions;
 
 use Closure;
 use Filament\Actions\StaticAction;
 use Illuminate\Database\Eloquent\Model;
-use SolutionForest\FilamentTree\Components\Tree;
+use Marcha\FilamentTree\Components\Tree;
 
 class ViewAction extends Action
 {

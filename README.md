@@ -1,33 +1,15 @@
-> [!IMPORTANT]
-> Please note that we will only be updating to version 2.x, excluding any bug fixes.
-
 # Filament Tree
 
 Filament Tree is a plugin for Filament Admin that creates a model management page with a heritage tree structure view. This plugin can be used to create menus and more.
-
-
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/solution-forest/filament-tree.svg?style=flat-square)](https://packagist.org/packages/solution-forest/filament-tree)
-[![Total Downloads](https://img.shields.io/packagist/dt/solution-forest/filament-tree.svg?style=flat-square)](https://packagist.org/packages/solution-forest/filament-tree)
-
-This plugin creates model management page with heritage tree structure view for Filament Admin. It could be used to create menu, etc.
-
-Demo site : https://filament-cms-website-demo.solutionforest.net/admin
-
-Demo username : demo@solutionforest.net
-
-Demo password : 12345678
-Auto Reset every hour.
-
 
 ## Installation
 
 To install the package, run the following command:
 
 ```bash
-composer require solution-forest/filament-tree
+composer require marcha/filament-tree
 ```
 
-> **Important: Need to publish assets after version 2.x**
 ```bash
 php artisan filament:assets
 ```
@@ -40,7 +22,7 @@ Add the plugin's views to your `tailwind.config.js` file.
 
 ```js
 content: [
-    '<path-to-vendor>/solution-forest/filament-tree/resources/**/*.blade.php',
+    '<path-to-vendor>/marcha/filament-tree/resources/**/*.blade.php',
 ]
 ```
 
@@ -75,7 +57,6 @@ return [
 ];
 
 ```
-![Screenshot](https://github.com/solutionforest/filament-tree/assets/68211972/d4bc8d33-3448-4cf5-837e-14116e28b4b5)
 
 ## Usage
 
@@ -115,7 +96,7 @@ The corresponding model is `app/Models/ProductCategory.php`:
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use SolutionForest\FilamentTree\Concern\ModelTree;
+use Marcha\FilamentTree\Concern\ModelTree;
 
 class ProductCategory extends Model
 {
@@ -135,7 +116,7 @@ The field names of the three fields `parent_id`, `order`, and `title` in the tab
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use SolutionForest\FilamentTree\Concern\ModelTree;
+use Marcha\FilamentTree\Concern\ModelTree;
 
 class ProductCategory extends Model
 {
@@ -205,7 +186,7 @@ namespace App\Filament\Widgets;
 use App\Models\ProductCategory as ModelsProductCategory;
 use App\Filament\Widgets;
 use Filament\Forms\Components\TextInput;
-use SolutionForest\FilamentTree\Widgets\Tree as BaseWidget;
+use Marcha\FilamentTree\Widgets\Tree as BaseWidget;
 
 class ProductCategoryWidget extends BaseWidget
 {
@@ -342,7 +323,6 @@ public function getTreeRecordIcon(?\Illuminate\Database\Eloquent\Model $record =
     return 'heroicon-o-cake';
 }
 ```
-![tree-icon](https://github.com/solutionforest/filament-tree/assets/68525320/6a1ef719-9029-4e91-a20a-515a514c4326)
 
 #### Node collapsed state
 You can customize a collapsed state of the node. If you would like to show your tree initially collapsed you can use:
@@ -387,7 +367,7 @@ Suggest used with Spatie Translatable (https://filamentphp.com/plugins/filament-
 1. Ensure your model already apply translatable setup. (Refence on https://spatie.be/docs/laravel-translatable/v6/installation-setup)
 ```php
 use Filament\Actions\LocaleSwitcher;
-use SolutionForest\FilamentTree\Concern\ModelTree;
+use Marcha\FilamentTree\Concern\ModelTree;
 use Spatie\Translatable\HasTranslations;
 
 class Category extends Model
@@ -403,8 +383,8 @@ class Category extends Model
 2. You need to add the necessary trait and `LocaleSwitcher` header action to your tree page:
 ```php
 use App\Models\Category as TreePageModel;
-use SolutionForest\FilamentTree\Concern\TreeRecords\Translatable;
-use SolutionForest\FilamentTree\Pages\TreePage as BasePage;
+use Marcha\FilamentTree\Concern\TreeRecords\Translatable;
+use Marcha\FilamentTree\Pages\TreePage as BasePage;
 
 class Category extends BasePage
 {
@@ -466,22 +446,9 @@ If you discover any security related issues, please email info+package@solutionf
 ## Credits
 
 - [Carly]
+- [Solution Forest](https://github.com/solutionforest/filament-tree)
 - [All Contributors](../../contributors)
 
 ## License
 
 Filament Tree is open-sourced software licensed under the [MIT license](LICENSE.md).
-
-
-<p align="center"><a href="https://solutionforest.com" target="_blank"><img src="https://github.com/solutionforest/.github/blob/main/docs/images/sf.png?raw=true" width="200"></a></p>
-
-
-## About Solution Forest
-
-[Solution Forest](https://solutionforest.com) Web development agency based in Hong Kong. We help customers to solve their problems. We Love Open Soruces. 
-
-We have built a collection of best-in-class products:
-
-- [VantagoAds](https://vantagoads.com): A self manage Ads Server, Simplify Your Advertising Strategy.
-- [GatherPro.events](https://gatherpro.events): A Event Photos management tools, Streamline Your Event Photos.
-- [Website CMS Management](https://filamentphp.com/plugins/solution-forest-cms-website): Website CMS Management

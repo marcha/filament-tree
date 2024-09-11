@@ -1,16 +1,16 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Pages;
+namespace Marcha\FilamentTree\Pages;
 
 use Filament\Actions\Action as FilamentActionsAction;
 use Filament\Actions\CreateAction;
 use Filament\Infolists\Components\Component as InfolistsComponent;
 use Filament\Pages\Actions\Action as PagesAction;
 use Filament\Pages\Page;
-use SolutionForest\FilamentTree\Actions;
-use SolutionForest\FilamentTree\Components\Tree;
-use SolutionForest\FilamentTree\Concern\InteractWithTree;
-use SolutionForest\FilamentTree\Contract\HasTree;
+use Marcha\FilamentTree\Actions;
+use Marcha\FilamentTree\Components\Tree;
+use Marcha\FilamentTree\Concern\InteractWithTree;
+use Marcha\FilamentTree\Contract\HasTree;
 
 abstract class TreePage extends Page implements HasTree
 {

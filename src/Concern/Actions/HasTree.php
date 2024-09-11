@@ -1,8 +1,8 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Concern\Actions;
+namespace Marcha\FilamentTree\Concern\Actions;
 
-use SolutionForest\FilamentTree\Components\Tree;
+use Marcha\FilamentTree\Components\Tree;
 
 interface HasTree
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionForest\FilamentTree\Commands;
+namespace Marcha\FilamentTree\Commands;
 
 use Closure;
 use Filament\Support\Commands\Concerns\CanManipulateFiles;
