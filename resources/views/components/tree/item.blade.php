@@ -1,8 +1,11 @@
-@php use Illuminate\Database\Eloquent\Model; @endphp
-@php use Filament\Facades\Filament; @endphp
-@php use Marcha\FilamentTree\Components\Tree; @endphp
-@php use App\Filament\Pages\Enums\TreeNodeType; @endphp
+@php 
+use Illuminate\Database\Eloquent\Model;
+use Filament\Facades\Filament;
+use Marcha\FilamentTree\Components\Tree;
+@endphp
+
 @props(['record', 'containerKey', 'tree', 'title' => null, 'icon' => null])
+
 @php
     /** @var $record Model */
     /** @var $containerKey string */
@@ -16,59 +19,36 @@
     } else {
         $children = $record->children;    
     }
+    $isEditable = $this->getIsEditable();
     $collapsed = $this->getNodeCollapsedState($record);
 
     $actions = $tree->getActions();
+    $itemCss = $this->getTreeRecordCssClass($record);
 @endphp
 
 <li data-id="{{ $recordKey }}"
     @class([
-        'dd-nodrag' => !$this->isEditable(), 'filament-tree-row dd-item'
+        'dd-nodrag' => !$isEditable, 'filament-tree-row dd-item'
     ])>
     <div wire:loading.remove.delay
         wire:target="{{ implode(',', Tree::LOADING_TARGETS) }}"
-        @class([
-            'rounded-lg border h-10',
-            'mb-2',
-            'flex w-full items-center',
-            'border-gray-300 bg-gray-100 dark:border-white/10 dark:bg-gray-800' => ($record->node_type->value !== 0),
-            'border-gray-300 bg-white dark:border-white/10 dark:bg-gray-900' => ($record->node_type->value === 0),
-            'dd-handle' => $this->isEditable()
-        ])>
+        style="--c-400:var(--primary-400)" 
+        class="rounded-lg border h-10 mb-2 flex w-full items-center dark:hover:bg-custom-400/10 hover:bg-custom-400/10 {{$itemCss}} {{$isEditable?'dd-handle':''}}">
 
         <button type="button" @class([
             'h-full flex items-center',
             'rounded-l-lg border-r rtl:rounded-l rtl:border-r-0 rtl:border-l px-2',
             'bg-gray-50 border-gray-300 dark:bg-white/5 dark:border-white/10',
         ])>
-            @switch ($record->node_type)
-                @case (TreeNodeType::Folder)
-                    <x-heroicon-o-folder class="text-gray-400 dark:text-gray-500 w-4 h-4"/>
-                    @break
-
-                @case (TreeNodeType::PDF)
-                    <img src="../images/app/pdfdoc.png">
-                    @break
-
-                @case (TreeNodeType::Link)
-                    <x-heroicon-o-link class="text-gray-400 dark:text-gray-500 w-4 h-4"/>
-                    @break
-                
-                @default
-            @endswitch
+            @if ($icon)
+                <div class="w-4 text-gray-400 dark:text-gray-500">
+                    <x-dynamic-component :component="$icon" class="w-5 h-5"/>
+                </div>
+            @endif
         </button>
 
         <div class="dd-content dd-nodrag flex gap-1">
-            @if ($icon)
-                <div class="w-4">
-                    <x-dynamic-component :component="$icon" class="w-4 h-4"/>
-                </div>
-            @endif
-
-            <span @class([
-                'ml-4 rtl:mr-4' => !$icon,
-                'font-semibold'
-            ])>
+            <span class="ml-4 font-semibold">
                 {!! $title !!}
             </span>
 
@@ -82,7 +62,7 @@
             </div>
         </div>
 
-        @if ($this->isEditable() && count($actions))
+        @if ($isEditable && count($actions))
             <div class="dd-nodrag ml-auto mr-4 rtl:ml-4 rtl:mr-auto">
                 <x-filament-tree::actions :actions="$actions" :record="$record" />
             </div>

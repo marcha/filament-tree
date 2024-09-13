@@ -45,6 +45,11 @@ trait InteractWithTree
         $this->hasMounted = true;
     }
 
+    public function getIsEditable(): bool
+    {
+        return false;
+    }
+
     public function mountInteractsWithTree(): void
     {
     }
@@ -73,6 +78,11 @@ trait InteractWithTree
             return null;
         }
         return $record->{(method_exists($record, 'determineIconColumnName') ? $record->determineIconColumnName() : 'icon')};
+    }
+
+    public function getTreeRecordCssClass(?Model $record = null): string
+    {
+        return '';        
     }
 
     public function getRecordKey(?Model $record): ?string

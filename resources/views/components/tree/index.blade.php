@@ -23,7 +23,7 @@
                 </x-filament::button>
             </div>
             <div class="btn-group">
-                @if ($this->isEditable())
+                @if ($this->getIsEditable())
                     <x-filament::button tag="button" data-action="save" x-on:click="save()" wire:loading.attr="disabled" wire:loading.class="cursor-wait opacity-70">
                         <x-filament::loading-indicator class="h-4 w-4" wire:loading wire:target="updateTree"/>
                         <span wire:loading.remove wire:target="updateTree">
@@ -76,7 +76,7 @@
         :width="$action?->getModalWidth()"
         :wire:key="$action ? $this->getId() . '.tree.actions.' . $action->getName() . '.modal' : null"
         x-on:closed-form-component-action-modal.window="if (($event.detail.id === '{{ $this->getId() }}') && $wire.mountedTreeActions.length) open()"
-        x-on:modal-closed.stop="
+        x-on:modal-closed.once.stop="
             const mountedTreeActionShouldOpenModal = {{ \Illuminate\Support\Js::from($action && $this->mountedTreeActionShouldOpenModal()) }}
 
             if (! mountedTreeActionShouldOpenModal) {
