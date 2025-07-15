@@ -40,11 +40,11 @@ class FilamentTreeServiceProvider extends PackageServiceProvider
     {
         FilamentAsset::register([
             Css::make('filament-tree-min', __DIR__ . '/../resources/dist/filament-tree.css'),
-        ], 'solution-forest/filament-tree');
+        ], 'marcha/filament-tree');
         
         FilamentAsset::register([
             AlpineComponent::make('filament-tree-component', __DIR__ . '/../resources/dist/components/filament-tree-component.js'),
-        ], 'solution-forest/filament-tree');
+        ], 'marcha/filament-tree');
     }
 
     protected function registerBlueprintMacros()
