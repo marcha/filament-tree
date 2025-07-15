@@ -7,7 +7,7 @@
 <div wire:disabled="updateTree"
     x-ignore
     ax-load
-    ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('filament-tree-component', 'solution-forest/filament-tree') }}"
+    ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('filament-tree-component', 'marcha/filament-tree') }}"
     x-data="treeNestableComponent({
         containerKey: {{ $containerKey }},
         maxDepth: {{ $maxDepth }}
