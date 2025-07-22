@@ -164,7 +164,7 @@ trait InteractWithTree
         }
     }
 
-    public function searchTree()
+    public function searchTree(): void
     {
         $this->dispatch('refreshTree');
     }
