@@ -163,4 +163,15 @@ trait InteractWithTree
             }
         }
     }
+
+    public function searchTree()
+    {
+        $this->dispatch('refreshTree');
+    }
+
+    public function resetTreeSearch(): void
+    {
+        $this->searchString = '';
+        $this->dispatch('refreshTree');
+    }
 }

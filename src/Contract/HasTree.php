@@ -14,4 +14,6 @@ interface HasTree
     public function getTreeRecordTitle(?Model $record = null): string;
     public function getRecordKey(?Model $record): ?string;
     public function makeFilamentTranslatableContentDriver(): ?TranslatableContentDriver;
+    public function searchTree(): void;
+    public function resetTreeSearch(): void;
 }
